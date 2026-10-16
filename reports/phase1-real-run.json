@@ -1,0 +1,90 @@
+{
+  "platform": "macOS-14.5-arm64-arm-64bit",
+  "python": "3.12.13",
+  "videos": [
+    {
+      "id": "e85881a4eaa8d8a9a7591faa",
+      "name": "comma2k19-driving.mp4",
+      "source_sha256": "e85881a4eaa8d8a9a7591faae8f2fbfb0dc774a36ff37ed8309b1a59794040d2",
+      "duration": 60.0,
+      "import_seconds_cached_or_new": 0.021416916977614164
+    },
+    {
+      "id": "79091e5b119aca7f986b25f5",
+      "name": "tum-s02.mp4",
+      "source_sha256": "79091e5b119aca7f986b25f5c5b83e42bd7c308011dd7ff20f34edcae5ca3636",
+      "duration": 119.0,
+      "import_seconds_cached_or_new": 0.03859645896591246
+    }
+  ],
+  "runs": [
+    {
+      "id": "59901ec5ac549f404b5afbec",
+      "video_id": "e85881a4eaa8d8a9a7591faa",
+      "config": {
+        "sample_fps": 2.0,
+        "window_seconds": 6.0,
+        "max_candidates": 4,
+        "evidence_frames": 6,
+        "strategy": "motion",
+        "annotator": "smolvlm",
+        "model_path": "models/smolvlm2-2.2b",
+        "device": "mps"
+      },
+      "created_at": "2026-10-15T05:29:58.896886+00:00",
+      "status": "completed",
+      "event_ids": [
+        "4b69018169dd4cb6dd61951a",
+        "85329de6f0f0eb2d7a845c8b",
+        "d976668ce4f1ef88ce858a1d",
+        "48734c15549924e0e9cff97f"
+      ],
+      "warnings": [],
+      "strategy_version": "motion-residual-v1",
+      "software_version": "0.1.0",
+      "sample_count": 120,
+      "index_seconds": 0.0015120410826057196,
+      "elapsed_seconds": 52.4739769580774,
+      "video_seconds": 60.0,
+      "finished_at": "2026-10-15T05:30:51.371755+00:00"
+    },
+    {
+      "id": "fee14646fa40483bdbe894e1",
+      "video_id": "79091e5b119aca7f986b25f5",
+      "config": {
+        "sample_fps": 2.0,
+        "window_seconds": 6.0,
+        "max_candidates": 4,
+        "evidence_frames": 6,
+        "strategy": "motion",
+        "annotator": "smolvlm",
+        "model_path": "models/smolvlm2-2.2b",
+        "device": "mps"
+      },
+      "created_at": "2026-10-15T05:30:51.415615+00:00",
+      "status": "completed",
+      "event_ids": [
+        "9e3cde74ac5176cdfaecd730",
+        "47b6b124b1194b487103c03e",
+        "f54628461d6fd29f8cca8f82",
+        "93196d225892b4de099656c2"
+      ],
+      "warnings": [],
+      "strategy_version": "motion-residual-v1",
+      "software_version": "0.1.0",
+      "sample_count": 238,
+      "index_seconds": 0.0016975000035017729,
+      "elapsed_seconds": 27.77171212504618,
+      "video_seconds": 119.0,
+      "finished_at": "2026-10-15T05:31:19.187793+00:00"
+    }
+  ],
+  "elapsed_seconds": 80.31459554191679,
+  "max_rss_bytes_macos": 3961815040,
+  "export": {
+    "id": "v1-d1add4ea1ec1",
+    "directory": "workspace/exports/v1-d1add4ea1ec1",
+    "zip": "workspace/exports/v1-d1add4ea1ec1.zip",
+    "event_count": 8
+  }
+}

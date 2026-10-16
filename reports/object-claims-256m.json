@@ -1,0 +1,129 @@
+{
+  "task": "clip-level object class mention verification",
+  "reference_source": "publisher OpenLABEL annotations",
+  "num_clips": 3,
+  "num_scored_clips": 3,
+  "true_positive_mentions": 3,
+  "false_positive_mentions": 0,
+  "omitted_classes": 8,
+  "micro_precision": 1.0,
+  "micro_recall": 0.2727272727272727,
+  "records": [
+    {
+      "sequence": "r09_s02",
+      "event_id": "d656590130445ece53f690bd",
+      "description": "a group of cars driving on a highway with a red car at the front",
+      "scored": true,
+      "reference_classes": [
+        "BUS",
+        "CAR",
+        "TRUCK"
+      ],
+      "claimed_classes": [
+        "CAR"
+      ],
+      "unsupported_mentions": [],
+      "omitted_classes": [
+        "BUS",
+        "TRUCK"
+      ],
+      "reference_files": [
+        "r09_s02/labels/s040_camera_basler_north_50mm/1634804561_431000000_s040_camera_basler_north_50mm.json",
+        "r09_s02/labels/s040_camera_basler_north_50mm/1634804562_431000000_s040_camera_basler_north_50mm.json",
+        "r09_s02/labels/s040_camera_basler_north_50mm/1634804563_431000000_s040_camera_basler_north_50mm.json",
+        "r09_s02/labels/s040_camera_basler_north_50mm/1634804564_912000000_s040_camera_basler_north_50mm.json",
+        "r09_s02/labels/s040_camera_basler_north_50mm/1634804565_909000000_s040_camera_basler_north_50mm.json",
+        "r09_s02/labels/s040_camera_basler_north_50mm/1634804566_910000000_s040_camera_basler_north_50mm.json"
+      ],
+      "model": {
+        "backend": "smolvlm",
+        "name": "HuggingFaceTB/SmolVLM2-256M-Video-Instruct",
+        "revision": "067788b187b95ebe7b2e040b3e4299e342e5b8fd",
+        "config_sha256": "756cb7d37d7659c9d5a71c563f9d2530f9dd674ab7e909d8d0dd5b1a2d3e8317",
+        "device": "mps",
+        "dtype": "torch.float16"
+      }
+    },
+    {
+      "sequence": "r09_s03",
+      "event_id": "fcf22e83431217255cfc2a85",
+      "description": "a highway with cars driving down it at night",
+      "scored": true,
+      "reference_classes": [
+        "BUS",
+        "CAR",
+        "PEDESTRIAN",
+        "TRUCK"
+      ],
+      "claimed_classes": [
+        "CAR"
+      ],
+      "unsupported_mentions": [],
+      "omitted_classes": [
+        "BUS",
+        "PEDESTRIAN",
+        "TRUCK"
+      ],
+      "reference_files": [
+        "r09_s03/labels/s040_camera_basler_north_50mm/1648480806_981000000_s040_camera_basler_north_50mm.json",
+        "r09_s03/labels/s040_camera_basler_north_50mm/1648480807_981000000_s040_camera_basler_north_50mm.json",
+        "r09_s03/labels/s040_camera_basler_north_50mm/1648480808_981000000_s040_camera_basler_north_50mm.json",
+        "r09_s03/labels/s040_camera_basler_north_50mm/1648480810_461000000_s040_camera_basler_north_50mm.json",
+        "r09_s03/labels/s040_camera_basler_north_50mm/1648480811_461000000_s040_camera_basler_north_50mm.json",
+        "r09_s03/labels/s040_camera_basler_north_50mm/1648480812_461000000_s040_camera_basler_north_50mm.json"
+      ],
+      "model": {
+        "backend": "smolvlm",
+        "name": "HuggingFaceTB/SmolVLM2-256M-Video-Instruct",
+        "revision": "067788b187b95ebe7b2e040b3e4299e342e5b8fd",
+        "config_sha256": "756cb7d37d7659c9d5a71c563f9d2530f9dd674ab7e909d8d0dd5b1a2d3e8317",
+        "device": "mps",
+        "dtype": "torch.float16"
+      }
+    },
+    {
+      "sequence": "r09_s04",
+      "event_id": "74391db7130b413741ac8d9b",
+      "description": "a highway with cars driving down it at night",
+      "scored": true,
+      "reference_classes": [
+        "BUS",
+        "CAR",
+        "PEDESTRIAN",
+        "TRUCK"
+      ],
+      "claimed_classes": [
+        "CAR"
+      ],
+      "unsupported_mentions": [],
+      "omitted_classes": [
+        "BUS",
+        "PEDESTRIAN",
+        "TRUCK"
+      ],
+      "reference_files": [
+        "r09_s04/labels/s040_camera_basler_north_50mm/1648483361_981000000_s040_camera_basler_north_50mm.json",
+        "r09_s04/labels/s040_camera_basler_north_50mm/1648483362_981000000_s040_camera_basler_north_50mm.json",
+        "r09_s04/labels/s040_camera_basler_north_50mm/1648483363_981000000_s040_camera_basler_north_50mm.json",
+        "r09_s04/labels/s040_camera_basler_north_50mm/1648483365_461000000_s040_camera_basler_north_50mm.json",
+        "r09_s04/labels/s040_camera_basler_north_50mm/1648483366_461000000_s040_camera_basler_north_50mm.json",
+        "r09_s04/labels/s040_camera_basler_north_50mm/1648483367_461000000_s040_camera_basler_north_50mm.json"
+      ],
+      "model": {
+        "backend": "smolvlm",
+        "name": "HuggingFaceTB/SmolVLM2-256M-Video-Instruct",
+        "revision": "067788b187b95ebe7b2e040b3e4299e342e5b8fd",
+        "config_sha256": "756cb7d37d7659c9d5a71c563f9d2530f9dd674ab7e909d8d0dd5b1a2d3e8317",
+        "device": "mps",
+        "dtype": "torch.float16"
+      }
+    }
+  ],
+  "limitations": [
+    "Only three 6s roadside clips sampled at 2fps; not a benchmark.",
+    "Reference classes are the union of publisher labels for the 6 source frames selected as model evidence.",
+    "Regex counts mentioned classes, including potential negated mentions; inspect records.",
+    "Does not measure motion, accident detection, event recall, hallucinated relations or localization.",
+    "No human verification of publisher annotation completeness; no train/test tuning performed."
+  ]
+}

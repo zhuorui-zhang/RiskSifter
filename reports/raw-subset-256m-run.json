@@ -1,0 +1,118 @@
+{
+  "platform": "macOS-14.5-arm64-arm-64bit",
+  "python": "3.12.13",
+  "videos": [
+    {
+      "id": "ef6969d32ddeac79deea858c",
+      "name": "r09_s02.mp4",
+      "source_sha256": "ef6969d32ddeac79deea858c7c3ab41d5392ab930e4b13c36fc4d335caf30da4",
+      "duration": 6.0,
+      "import_seconds_cached_or_new": 0.18254479113966227
+    },
+    {
+      "id": "8443270d5ba6ba1d5e880fff",
+      "name": "r09_s03.mp4",
+      "source_sha256": "8443270d5ba6ba1d5e880fff031161257a19718fef9efc00f2374fa1f50c05cf",
+      "duration": 6.0,
+      "import_seconds_cached_or_new": 0.1781801669858396
+    },
+    {
+      "id": "6fc6a298f187014a45852282",
+      "name": "r09_s04.mp4",
+      "source_sha256": "6fc6a298f187014a45852282f1d6cecb7901cc140f88aee860b7d0222046ed6a",
+      "duration": 6.0,
+      "import_seconds_cached_or_new": 0.16828791704028845
+    }
+  ],
+  "runs": [
+    {
+      "id": "876af3c6b1b4454bfaead2ac",
+      "video_id": "ef6969d32ddeac79deea858c",
+      "config": {
+        "sample_fps": 2.0,
+        "window_seconds": 6.0,
+        "max_candidates": 1,
+        "evidence_frames": 6,
+        "strategy": "motion",
+        "annotator": "smolvlm",
+        "model_path": "models/smolvlm2-256m",
+        "device": "mps"
+      },
+      "created_at": "2026-10-15T06:08:50.617685+00:00",
+      "status": "completed",
+      "event_ids": [
+        "d656590130445ece53f690bd"
+      ],
+      "warnings": [],
+      "strategy_version": "motion-residual-v1",
+      "software_version": "0.1.0",
+      "sample_count": 12,
+      "index_seconds": 0.18426875001750886,
+      "elapsed_seconds": 7.2125657089054585,
+      "video_seconds": 6.0,
+      "finished_at": "2026-10-15T06:08:57.830341+00:00"
+    },
+    {
+      "id": "3917714f0ea0880e3cf6b77c",
+      "video_id": "8443270d5ba6ba1d5e880fff",
+      "config": {
+        "sample_fps": 2.0,
+        "window_seconds": 6.0,
+        "max_candidates": 1,
+        "evidence_frames": 6,
+        "strategy": "motion",
+        "annotator": "smolvlm",
+        "model_path": "models/smolvlm2-256m",
+        "device": "mps"
+      },
+      "created_at": "2026-10-15T06:08:58.010679+00:00",
+      "status": "completed",
+      "event_ids": [
+        "fcf22e83431217255cfc2a85"
+      ],
+      "warnings": [],
+      "strategy_version": "motion-residual-v1",
+      "software_version": "0.1.0",
+      "sample_count": 12,
+      "index_seconds": 0.06127175013534725,
+      "elapsed_seconds": 1.26874270895496,
+      "video_seconds": 6.0,
+      "finished_at": "2026-10-15T06:08:59.279433+00:00"
+    },
+    {
+      "id": "f2e8f306e25114dc7962b06b",
+      "video_id": "6fc6a298f187014a45852282",
+      "config": {
+        "sample_fps": 2.0,
+        "window_seconds": 6.0,
+        "max_candidates": 1,
+        "evidence_frames": 6,
+        "strategy": "motion",
+        "annotator": "smolvlm",
+        "model_path": "models/smolvlm2-256m",
+        "device": "mps"
+      },
+      "created_at": "2026-10-15T06:08:59.449993+00:00",
+      "status": "completed",
+      "event_ids": [
+        "74391db7130b413741ac8d9b"
+      ],
+      "warnings": [],
+      "strategy_version": "motion-residual-v1",
+      "software_version": "0.1.0",
+      "sample_count": 12,
+      "index_seconds": 0.06688816705718637,
+      "elapsed_seconds": 1.352201750036329,
+      "video_seconds": 6.0,
+      "finished_at": "2026-10-15T06:09:00.802207+00:00"
+    }
+  ],
+  "elapsed_seconds": 10.369697875110433,
+  "max_rss_bytes_macos": 1897889792,
+  "export": {
+    "id": "v1-c46c97dad8d3",
+    "directory": "data/raw-eval-256m/exports/v1-c46c97dad8d3",
+    "zip": "data/raw-eval-256m/exports/v1-c46c97dad8d3.zip",
+    "event_count": 3
+  }
+}

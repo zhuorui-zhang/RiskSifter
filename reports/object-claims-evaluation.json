@@ -1,0 +1,129 @@
+{
+  "task": "clip-level object class mention verification",
+  "reference_source": "publisher OpenLABEL annotations",
+  "num_clips": 3,
+  "num_scored_clips": 3,
+  "true_positive_mentions": 8,
+  "false_positive_mentions": 0,
+  "omitted_classes": 3,
+  "micro_precision": 1.0,
+  "micro_recall": 0.7272727272727273,
+  "records": [
+    {
+      "sequence": "r09_s02",
+      "event_id": "f02312bc0b922bda3e72123d",
+      "description": "The image captures a highway scene at different times of day with varying traffic conditions. Initially, there is moderate traffic flow with cars and trucks moving along the lanes. As time progresses, the traffic increases, with more vehicles appearing on the road, indicating either an increase in traffic volume or a decrease in congestion. The environment remains consistent throughout the sequence, showing no significant changes in weather or lighting conditions. The camera angle and position remain constant, providing a continuous view of the highway without any noticeable shifts in perspective.",
+      "scored": true,
+      "reference_classes": [
+        "BUS",
+        "CAR",
+        "TRUCK"
+      ],
+      "claimed_classes": [
+        "CAR",
+        "TRUCK"
+      ],
+      "unsupported_mentions": [],
+      "omitted_classes": [
+        "BUS"
+      ],
+      "reference_files": [
+        "r09_s02/labels/s040_camera_basler_north_50mm/1634804561_431000000_s040_camera_basler_north_50mm.json",
+        "r09_s02/labels/s040_camera_basler_north_50mm/1634804562_431000000_s040_camera_basler_north_50mm.json",
+        "r09_s02/labels/s040_camera_basler_north_50mm/1634804563_431000000_s040_camera_basler_north_50mm.json",
+        "r09_s02/labels/s040_camera_basler_north_50mm/1634804564_912000000_s040_camera_basler_north_50mm.json",
+        "r09_s02/labels/s040_camera_basler_north_50mm/1634804565_909000000_s040_camera_basler_north_50mm.json",
+        "r09_s02/labels/s040_camera_basler_north_50mm/1634804566_910000000_s040_camera_basler_north_50mm.json"
+      ],
+      "model": {
+        "backend": "smolvlm",
+        "name": "HuggingFaceTB/SmolVLM2-2.2B-Instruct",
+        "revision": "482adb537c021c86670beed01cd58990d01e72e4",
+        "config_sha256": "ec1f7e45deeafba7601f8dd0b6ca9ba75985dffc2f053e82341d12d06e2d9d46",
+        "device": "mps",
+        "dtype": "torch.float16"
+      }
+    },
+    {
+      "sequence": "r09_s03",
+      "event_id": "9e61fabb015a2ded28fd2e4d",
+      "description": "The sequence of images shows a highway with various vehicles such as cars, trucks, and buses moving along it under clear skies. The first image captures a moment where traffic is light, while subsequent images depict increasing congestion as time progresses. The highway is bordered by guardrails and has multiple lanes for each direction of travel. There's also an overhead bridge visible in some of the images, indicating that this highway might be part of a larger network connecting different regions.",
+      "scored": true,
+      "reference_classes": [
+        "BUS",
+        "CAR",
+        "PEDESTRIAN",
+        "TRUCK"
+      ],
+      "claimed_classes": [
+        "BUS",
+        "CAR",
+        "TRUCK"
+      ],
+      "unsupported_mentions": [],
+      "omitted_classes": [
+        "PEDESTRIAN"
+      ],
+      "reference_files": [
+        "r09_s03/labels/s040_camera_basler_north_50mm/1648480806_981000000_s040_camera_basler_north_50mm.json",
+        "r09_s03/labels/s040_camera_basler_north_50mm/1648480807_981000000_s040_camera_basler_north_50mm.json",
+        "r09_s03/labels/s040_camera_basler_north_50mm/1648480808_981000000_s040_camera_basler_north_50mm.json",
+        "r09_s03/labels/s040_camera_basler_north_50mm/1648480810_461000000_s040_camera_basler_north_50mm.json",
+        "r09_s03/labels/s040_camera_basler_north_50mm/1648480811_461000000_s040_camera_basler_north_50mm.json",
+        "r09_s03/labels/s040_camera_basler_north_50mm/1648480812_461000000_s040_camera_basler_north_50mm.json"
+      ],
+      "model": {
+        "backend": "smolvlm",
+        "name": "HuggingFaceTB/SmolVLM2-2.2B-Instruct",
+        "revision": "482adb537c021c86670beed01cd58990d01e72e4",
+        "config_sha256": "ec1f7e45deeafba7601f8dd0b6ca9ba75985dffc2f053e82341d12d06e2d9d46",
+        "device": "mps",
+        "dtype": "torch.float16"
+      }
+    },
+    {
+      "sequence": "r09_s04",
+      "event_id": "3aeb7225a10124a6a958c423",
+      "description": "The image captures a highway scene at different times of day with various vehicles such as cars, trucks, and buses moving along the lanes. The first image shows a red car driving on the left side of the road, while other vehicles like a black car and a white truck are also present. In the second image, there is an increase in traffic density with more vehicles including a yellow truck and a white van. By the third image, the traffic has slightly decreased but still maintains a busy flow. The fourth image shows a significant decrease in traffic with fewer vehicles compared to the previous images. The final image shows a slight increase in traffic again,",
+      "scored": true,
+      "reference_classes": [
+        "BUS",
+        "CAR",
+        "PEDESTRIAN",
+        "TRUCK"
+      ],
+      "claimed_classes": [
+        "BUS",
+        "CAR",
+        "TRUCK"
+      ],
+      "unsupported_mentions": [],
+      "omitted_classes": [
+        "PEDESTRIAN"
+      ],
+      "reference_files": [
+        "r09_s04/labels/s040_camera_basler_north_50mm/1648483361_981000000_s040_camera_basler_north_50mm.json",
+        "r09_s04/labels/s040_camera_basler_north_50mm/1648483362_981000000_s040_camera_basler_north_50mm.json",
+        "r09_s04/labels/s040_camera_basler_north_50mm/1648483363_981000000_s040_camera_basler_north_50mm.json",
+        "r09_s04/labels/s040_camera_basler_north_50mm/1648483365_461000000_s040_camera_basler_north_50mm.json",
+        "r09_s04/labels/s040_camera_basler_north_50mm/1648483366_461000000_s040_camera_basler_north_50mm.json",
+        "r09_s04/labels/s040_camera_basler_north_50mm/1648483367_461000000_s040_camera_basler_north_50mm.json"
+      ],
+      "model": {
+        "backend": "smolvlm",
+        "name": "HuggingFaceTB/SmolVLM2-2.2B-Instruct",
+        "revision": "482adb537c021c86670beed01cd58990d01e72e4",
+        "config_sha256": "ec1f7e45deeafba7601f8dd0b6ca9ba75985dffc2f053e82341d12d06e2d9d46",
+        "device": "mps",
+        "dtype": "torch.float16"
+      }
+    }
+  ],
+  "limitations": [
+    "Only three 6s roadside clips sampled at 2fps; not a benchmark.",
+    "Reference classes are the union of publisher labels for the 6 source frames selected as model evidence.",
+    "Regex counts mentioned classes, including potential negated mentions; inspect records.",
+    "Does not measure motion, accident detection, event recall, hallucinated relations or localization.",
+    "No human verification of publisher annotation completeness; no train/test tuning performed."
+  ]
+}

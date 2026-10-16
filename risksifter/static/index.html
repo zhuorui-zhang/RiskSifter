@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RiskSifter · 视频事件工作台</title><link rel="stylesheet" href="/static/style.css"></head>
+<body>
+<aside>
+  <a class="brand" href="/"><span class="logo">R<span>›</span></span><span>RiskSifter<small>LOCAL VIDEO WORKBENCH</small></span></a>
+  <div class="workspace-label">工作空间 <span class="dot"></span> 本地</div>
+  <button class="nav active" id="allVideos">▦ <span>事件工作台</span><span id="eventCount">0</span></button>
+  <div class="sidebar-heading">视频库 <button id="openImport" title="导入视频">＋</button></div>
+  <div id="videoList" class="video-list"></div>
+  <div class="sidebar-bottom"><span class="dot"></span> 视频保留在本机<p id="hardware">正在读取设备…</p><small>Phase 1 · 候选挖掘与人工审核</small></div>
+</aside>
+<main>
+  <header><div class="breadcrumb">工作空间 <span>/</span> 事件工作台</div><div class="header-actions"><span class="pill">OFFLINE CAPABLE</span><button id="exportButton" class="secondary">↗ 导出数据集</button></div></header>
+  <section class="page-title"><div><div class="eyebrow">FROM FOOTAGE TO EVIDENCE</div><h1>让关键片段浮出时间线。</h1><p>从原始视频发现候选，逐帧核对证据，将审核结果变成可追溯的数据。</p></div><button class="primary" id="importButton">＋ 导入视频</button></section>
+  <div class="stats"><div><span>已导入视频</span><strong id="statVideos">0</strong></div><div><span>候选片段</span><strong id="statEvents">0</strong></div><div><span>已人工确认</span><strong id="statApproved">0</strong></div><div><span>待审核</span><strong id="statPending">0</strong></div></div>
+  <section id="jobsPanel" class="jobs hidden" aria-live="polite"></section>
+  <section class="toolbar"><label class="search"><span>⌕</span><input id="search" placeholder="搜索描述，例如：行人、车辆变道、car…"><kbd>⌘ K</kbd></label><select id="videoFilter" aria-label="选择视频"><option value="">全部视频</option></select><select id="statusFilter" aria-label="审核状态"><option value="">全部状态</option><option value="pending">待审核</option><option value="approved">已确认</option><option value="rejected">已拒绝</option></select><select id="runScope" aria-label="分析版本"><option value="latest">最新分析</option><option value="all">含历史分析</option></select><button class="secondary" id="mineButton">✧ 挖掘所选视频</button></section>
+  <div class="mode-note">检索范围：已保存的描述与标签 · 中英关键词扩展 · 自动输出均为待审核伪标签</div>
+  <section class="workbench">
+    <div class="candidates"><div class="list-header"><h2>候选事件</h2><span id="visibleCount">0 个结果</span></div><div id="eventList"></div><div id="emptyState" class="empty"><div class="empty-icon">▤</div><h3>从一段行车视频开始</h3><p>导入本地视频，选择视频后点击「挖掘」。候选与证据会保存在这里。</p><button class="secondary" id="emptyImport">导入第一段视频</button></div></div>
+    <div id="detailEmpty" class="detail-empty"><div class="reticle">＋</div><h3>每一个判断，都有可回看的证据。</h3><p>选择左侧候选，回放、调整边界并审核标注。</p></div>
+    <article id="detail" class="detail hidden">
+      <div class="detail-heading"><div><span class="eyebrow">EVENT REVIEW</span><h2 id="detailTitle"></h2></div><span id="reviewBadge" class="badge"></span></div>
+      <video id="player" controls playsinline preload="metadata"></video>
+      <div class="playback-meta"><span id="timeRange"></span><a id="clipDownload">↓ 下载片段</a></div>
+      <div class="timeline-wrap"><div id="timeline" class="timeline" aria-label="视频事件时间线"></div><div class="timeline-labels"><span>00:00</span><span id="totalDuration"></span></div></div>
+      <div class="evidence-heading"><h3>模型证据帧</h3><span id="evidenceLabel"></span></div><div id="evidence" class="evidence"></div>
+      <div id="uncertainty" class="uncertainty"></div>
+      <form id="reviewForm">
+        <div class="boundary-fields"><label>开始 / 秒<input id="start" type="number" step="0.067" min="0" required><button type="button" id="setStart">设为当前播放位置</button></label><label>结束 / 秒<input id="end" type="number" step="0.067" min="0" required><button type="button" id="setEnd">设为当前播放位置</button></label></div>
+        <label>事件描述<textarea id="description" rows="3" required></textarea></label>
+        <label>检索 Query<textarea id="query" rows="2" required></textarea></label>
+        <label>标签 <small>用英文逗号分隔</small><input id="tags"></label>
+        <label>审核备注<input id="reviewNote" placeholder="可记录边界依据、误检原因或不确定项"></label>
+        <div class="review-actions"><button type="button" id="rejectButton" class="danger">拒绝</button><button type="button" id="saveButton" class="secondary">保存为待审核</button><button type="submit" class="primary">✓ 确认事件</button></div>
+      </form>
+      <details><summary>来源、模型输出与审核历史</summary><pre id="provenance"></pre></details>
+    </article>
+  </section>
+  <footer>RiskSifter / 0.1 <span>运动变化分数不是碰撞概率。无标定数据时不生成距离、TTC 或风险等级。</span></footer>
+</main>
+<dialog id="importDialog"><form method="dialog"><button class="close" aria-label="关闭">×</button></form><span class="eyebrow">ADD FOOTAGE</span><h2>导入本地视频</h2><p>支持 MP4、MOV、MKV、AVI、WebM。视频仅写入本地工作空间。</p><label class="dropzone" id="dropzone"><span>＋</span><strong>点击选择，或将视频拖到这里</strong><small>可选择多个文件 · 每个文件最多 2GB</small><input type="file" id="fileInput" accept="video/*" multiple hidden></label><div class="divider">或导入本机路径</div><input id="localPath" placeholder="/Users/you/Videos 或 /path/to/video.mp4"><button class="primary full" id="pathImport">导入路径</button><p class="small">文件夹将递归扫描。文件按内容去重，重复导入复用已有索引。</p></dialog>
+<dialog id="mineDialog"><form method="dialog"><button class="close" aria-label="关闭">×</button></form><span class="eyebrow">DISCOVER CANDIDATES</span><h2>挖掘候选片段</h2><p id="mineVideoName"></p><label>分析模式<select id="annotator"><option value="none">轻量模式 · 运动候选，无语义判断</option><option value="smolvlm">本地 SmolVLM2 · 证据帧描述</option></select></label><p id="modelNote" class="small"></p><div class="boundary-fields"><label>候选数量上限<input type="number" id="budget" min="1" max="50" value="4"></label><label>片段长度 / 秒<input type="number" id="window" min="2" max="30" value="6"></label></div><p class="small">先以 2 fps 建立运动索引，再对每个候选查看 6 帧。采样可能遗漏短暂动作；所有结果都需要审核。</p><button id="startMine" class="primary full">开始本地处理</button></dialog>
+<dialog id="exportDialog"><form method="dialog"><button class="close" aria-label="关闭">×</button></form><span class="eyebrow">BUILD A DATASET</span><h2>导出版本化数据集</h2><p>导出当前筛选结果中的已确认事件，包含可播放 MP4、JSONL 标注、证据帧、来源与审核记录。</p><label class="checkbox"><input type="checkbox" id="includePending">同时包含待审核的自动伪标签</label><p class="small">已拒绝事件不导出。视频原许可会随数据保留；工作台不自动模糊人脸或车牌。</p><button id="startExport" class="primary full">生成 ZIP 数据集</button></dialog>
+<div id="toast" class="toast hidden" role="status"></div>
+<script src="/static/app.js"></script>
+</body></html>

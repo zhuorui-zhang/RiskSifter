@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "video_duration": 119,
+  "evidence_seek": 106.733333,
+  "export_bytes": 19889172,
+  "console_errors": [],
+  "mobile_overflow": false,
+  "mobile_review_clipped": false,
+  "checks": [
+    "page loads",
+    "real video metadata",
+    "evidence seek",
+    "empty search",
+    "pending export ZIP",
+    "mobile video selection",
+    "mobile review layout"
+  ],
+  "verified_on": "2026-10-16"
+}

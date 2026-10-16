@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "risksifter"
+version = "0.1.0"
+description = "Local, evidence-grounded driving video mining workbench"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = [
+  "fastapi>=0.115,<1", "uvicorn>=0.34,<1", "python-multipart>=0.0.20,<1",
+  "opencv-python-headless>=4.10,<5", "numpy>=2,<3", "pillow>=11,<13",
+  "imageio-ffmpeg>=0.6,<1", "psutil>=6,<8",
+]
+[project.optional-dependencies]
+vlm = ["torch>=2.6,<3", "transformers==4.57.6", "accelerate>=1,<2", "num2words>=0.5", "torchvision>=0.21,<1"]
+test = ["pytest>=8,<10", "httpx>=0.28,<1"]
+[project.scripts]
+risksifter = "risksifter.cli:main"
+[tool.setuptools.packages.find]
+include = ["risksifter*"]
+[tool.setuptools.package-data]
+risksifter = ["static/*", "licenses/*.txt"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]

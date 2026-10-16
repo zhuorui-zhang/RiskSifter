@@ -1,0 +1,16 @@
+[
+  {
+    "experiment": "comparison-256m-v2",
+    "event_id": "5f08ee46c688587f0b565bb9",
+    "description": "[First image] - vehicle on highway at night with headlights on. [Second image] - car driving down a straight road at night. [Third image] - car driving down a straight road at night. [Fourth image] - car driving down a straight road at night. [Fifth image] - car driving down a straight road at night. [Sixth image] - car driving down a straight road at night. [Seventh image] - car driving down a straight road at night. [Eighth image] - car driving down a straight road at night. [Ninth image] - car driving down a straight",
+    "inference_seconds": 18.190788707928732,
+    "note": "Historical failed/inefficient preprocessing; not current performance."
+  },
+  {
+    "experiment": "comparison-2.2b-v2",
+    "event_id": "5f08ee46c688587f0b565bb9",
+    "description": "A car is driving on a highway at night with other cars ahead of it. The time stamp indicates that the photo was taken during the night.",
+    "inference_seconds": 69.45401433319785,
+    "note": "Historical failed/inefficient preprocessing; not current performance."
+  }
+]

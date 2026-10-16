@@ -1,0 +1,13 @@
+{
+  "source": "https://huggingface.co/datasets/commaai/comma2k19",
+  "revision": "4bff77c7254c654c28d4c2726186b4e825adccee",
+  "original_file": "compression_challenge/b0c9d2329ad1606b|2018-07-27--06-03-57/10/video.hevc",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2018 comma.ai",
+  "citation": "Schafer et al., A Commute in Data: The comma2k19 Dataset, 2018, arXiv:1812.05752",
+  "sha256": "5f3ad3c056dda7fc480e4344ac2199c0320af0cfce52637cbc8885cc004f0e33",
+  "viewpoint": "ego-driving",
+  "labels": "No accident ground truth supplied for this sample",
+  "conversion": "Raw HEVC remuxed at 20 fps",
+  "container_sha256": "e85881a4eaa8d8a9a7591faae8f2fbfb0dc774a36ff37ed8309b1a59794040d2"
+}
